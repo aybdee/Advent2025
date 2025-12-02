@@ -27,6 +27,9 @@ executable Advent2025-exe
   other-modules:
       Day01.Part1
       Day01.Part2
+      Day02.Part01
+      Day02.Part02
+      Utils
       Paths_Advent2025
   autogen-modules:
       Paths_Advent2025
