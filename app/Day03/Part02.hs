@@ -1,7 +1,9 @@
+module Day03.Part02 where
+
 import Data.Char (digitToInt, intToDigit)
 
-main :: IO ()
-main = do
+run :: IO ()
+run = do
   content <- readFile "../../data/Day03.txt"
   let input = lines content
   print (part2 input)

@@ -1,4 +1,4 @@
-module Utils (splitBy, trim, partitionN) where
+module Utils (splitBy, trim, partitionN, countChar) where
 
 import Data.Char (isDigit, isSpace)
 import Data.List (dropWhileEnd, isSuffixOf, stripPrefix)
@@ -24,3 +24,6 @@ partitionN numDivisions arr = reverse (foldl f [[]] arr)
     if length x < (length arr `div` numDivisions)
       then (x ++ [curr]) : xs
       else [curr] : x : xs
+
+countChar :: [Char] -> Char -> Int
+countChar str char = length (filter (== char) str)

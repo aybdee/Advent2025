@@ -1,7 +1,9 @@
+module Day01.Part1 where
+
 import Data.Ix (inRange)
 
-main :: IO ()
-main = do
+run :: IO ()
+run = do
   content <- readFile "../../data/Day01.txt"
   let input = lines content
   print (part1 input)

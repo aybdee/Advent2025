@@ -1,7 +1,9 @@
+module Day01.Part2 where
+
 import Data.Ix (inRange)
 
-main :: IO ()
-main = do
+run :: IO ()
+run = do
   content <- readFile "../../data/Day01.txt"
   let input = lines content
   print (part2 input)
@@ -34,13 +36,13 @@ getPositionsAndZeroCount = scanl f (50, 0)
       touchesZero = case direction of
         R ->
           let fullCycles = magnitude `div` 100
-              remainder = magnitude `mod` 100
-              extra = if current + remainder >= 100 then 1 else 0
+              rerunder = magnitude `mod` 100
+              extra = if current + rerunder >= 100 then 1 else 0
            in fullCycles + extra
         L ->
           let fullCycles = magnitude `div` 100
-              remainder = magnitude `mod` 100
-              extra = if current /= 0 && remainder >= current then 1 else 0
+              rerunder = magnitude `mod` 100
+              extra = if current /= 0 && rerunder >= current then 1 else 0
            in fullCycles + extra
      in
       (position, touchesZero)

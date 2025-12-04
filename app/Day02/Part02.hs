@@ -1,8 +1,10 @@
+module Day02.Part02 where
+
 import Data.Ix (inRange)
 import Utils (partitionN, splitBy)
 
-main :: IO ()
-main = do
+run :: IO ()
+run = do
   content <- readFile "../data/Day02.txt"
   print (part1 content)
 
