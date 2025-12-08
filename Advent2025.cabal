@@ -33,6 +33,10 @@ executable Advent2025-exe
       Day03.Part02
       Day04.Part01
       Day04.Part02
+      Day05.Part01
+      Day05.Part02
+      Day06.Part01
+      Day06.Part02
       Utils
       Paths_Advent2025
   autogen-modules:
@@ -42,5 +46,6 @@ executable Advent2025-exe
   ghc-options: -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , regex-tdfa
     , vector
   default-language: Haskell2010

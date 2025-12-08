@@ -1,4 +1,4 @@
-module Utils (splitBy, trim, partitionN, countChar) where
+module Utils (splitBy, trim, partitionN, countChar, splitAtIndices, replaceChar) where
 
 import Data.Char (isDigit, isSpace)
 import Data.List (dropWhileEnd, isSuffixOf, stripPrefix)
@@ -27,3 +27,14 @@ partitionN numDivisions arr = reverse (foldl f [[]] arr)
 
 countChar :: [Char] -> Char -> Int
 countChar str char = length (filter (== char) str)
+
+replaceChar :: Char -> Char -> String -> String
+replaceChar old new = map (\c -> if c == old then new else c)
+
+splitAtIndices :: [Int] -> [a] -> [[a]]
+splitAtIndices [] xs = [xs]
+splitAtIndices (i : is) xs =
+  let (first, rest) = splitAt i xs
+      rest' = drop 1 rest
+      is' = map (\x -> x - (i + 1)) is
+   in first : splitAtIndices is' rest'
