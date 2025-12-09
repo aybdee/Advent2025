@@ -1,0 +1,5 @@
+getCount -> [board],  (split_direction) -> count for direction
+
+
+at each split -> existingCount + (count possibilies left) + (possibilities right)
+at base case -> existing -> 0

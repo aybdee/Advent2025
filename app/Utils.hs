@@ -1,4 +1,4 @@
-module Utils (splitBy, trim, partitionN, countChar, splitAtIndices, replaceChar) where
+module Utils (splitBy, trim, partitionN, countChar, splitAtIndices, replaceChar, traceExpr) where
 
 import Data.Char (isDigit, isSpace)
 import Data.List (dropWhileEnd, isSuffixOf, stripPrefix)
